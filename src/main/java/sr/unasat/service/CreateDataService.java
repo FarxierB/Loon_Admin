@@ -5,7 +5,7 @@ import sr.unasat.entity.WerknemerDetail;
 
 public class CreateDataService {
 
-    public void CreateData(){
+    public static void CreateData(){
 
     AfdelingService afdelingService = new AfdelingService();
     FunctieService functieService = new FunctieService();
