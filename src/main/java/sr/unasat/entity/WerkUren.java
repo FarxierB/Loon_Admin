@@ -3,8 +3,8 @@ package sr.unasat.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "WerknemerSalaris")
-public class WerknemerSalaris {
+@Table(name = "WerkUren")
+public class WerkUren {
     @Id
     @GeneratedValue
     private int Id;
@@ -12,24 +12,21 @@ public class WerknemerSalaris {
     private String Maand;
     private double AantalUren;
     private double Uurloon;
-    private double Salaris;
 
-
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "Werknemer_ID")
     private Werknemer werknemerId;
 
 
-    public WerknemerSalaris(int id, String maand, double aantalUren, double uurloon, double salaris, Werknemer werknemerId) {
+    public WerkUren(int id, String maand, double aantalUren, double uurloon, Werknemer werknemerId) {
         Id = id;
         Maand = maand;
         AantalUren = aantalUren;
         Uurloon = uurloon;
-        Salaris = salaris;
         this.werknemerId = werknemerId;
     }
 
-    public WerknemerSalaris() {
+    public WerkUren() {
 
     }
 
@@ -55,14 +52,6 @@ public class WerknemerSalaris {
 
     public void setAantalUren(double aantalUren) {
         AantalUren = aantalUren;
-    }
-
-    public double getSalaris() {
-        return Salaris;
-    }
-
-    public void setSalaris(double salaris) {
-        Salaris = salaris;
     }
 
     public double getUurloon() {return Uurloon;}
