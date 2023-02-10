@@ -3,7 +3,9 @@ package sr.unasat.entity;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "Afdeling")
@@ -15,7 +17,7 @@ public class Afdeling {
     private String AfdelingNaam;
 
     @OneToMany (mappedBy = "Afdeling")
-    private List<Functie> functies = new ArrayList<>();
+    private Set<Functie> functies = new HashSet<>();
 
 
     public int getId() {
@@ -34,11 +36,11 @@ public class Afdeling {
         AfdelingNaam = afdelingNaam;
     }
 
-    public List<Functie> getFuncties() {
+    public Set<Functie> getFuncties() {
         return functies;
     }
 
-    public void setFuncties(Functie functie) {
-        functies.add(functie);
+    public void setFuncties(Set<Functie> functies) {
+        this.functies = functies;
     }
 }

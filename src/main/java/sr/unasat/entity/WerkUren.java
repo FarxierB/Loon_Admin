@@ -13,7 +13,7 @@ public class WerkUren {
     private double AantalUren;
     private double Uurloon;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "Werknemer_ID")
     private Werknemer werknemerId;
 

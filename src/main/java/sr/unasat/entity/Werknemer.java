@@ -3,7 +3,9 @@ package sr.unasat.entity;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "Werknemer")
@@ -17,7 +19,7 @@ public class Werknemer {
 
     @ManyToMany
     @JoinTable(name = "Werknemer_Rol", joinColumns = {@JoinColumn(name = "Werknemer_ID")}, inverseJoinColumns = {@JoinColumn(name = "Functie_ID")})
-    private List<Functie> functies = new ArrayList<>();
+    private Set<Functie> functies = new HashSet<>();
 
 
     public int getId() {
@@ -52,11 +54,11 @@ public class Werknemer {
         Email = email;
     }
 
-    public List<Functie> getFuncties() {
+    public Set<Functie> getFuncties() {
         return functies;
     }
 
-    public void setFuncties(List<Functie> functies) {
+    public void setFuncties(Set<Functie> functies) {
         this.functies = functies;
     }
 }
