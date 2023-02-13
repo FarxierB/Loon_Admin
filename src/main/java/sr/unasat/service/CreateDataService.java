@@ -15,26 +15,7 @@ public class CreateDataService {
     WerkUrenService werkUrenService = new WerkUrenService();
     WerknemerService werknemerService = new WerknemerService();
 
-  /*  Werknemer person1 = new Werknemer();
-        person1.setVoornaam("Shaq");
-        person1.setAchternaam("O'Neil");
-        person1.setEmail("soneil@hotmail.com ");
-    Werknemer Adres1BijWerknemer1 = werknemerService.addWerknemer(person1);
 
-    WerknemerDetail adres1 = new WerknemerDetail();
-        adres1.setAdress("Elisabethshof #3");
-        adres1.setTelefoon(8859895);
-        adres1.setGeboorteDatum("12-12-1992");
-        adres1.setWerknemerId(Adres1BijWerknemer1);
-        werknemerDetailService.addWerknemerDetail(adres1);
-
-    Werknemer person2 = new Werknemer();
-        person2.setVoornaam("Dhiradj");
-        person2.setAchternaam("Bechan");
-        person2.setEmail("dbechan@hotmail.com ");
-
-        werknemerService.addWerknemer(person2);
-        */
 
         Afdeling afdeling1 = new Afdeling();
         afdeling1.setAfdelingNaam("Frontdesk");
@@ -107,6 +88,15 @@ public class CreateDataService {
         werknemer4.setAchternaam("Parker");
         werknemer4.setEmail("parker@hotmail.com ");
         Werknemer w4 = werknemerService.addWerknemer(werknemer4);
+
+
+
+        werknemer1.setFuncties(assfin);
+        werknemer1.setFuncties(assmark);
+        werknemer2.setFuncties(assfin);
+        assfin.setWerknemers(werknemer1);
+        assfin.setWerknemers(werknemer2);
+        assmark.setWerknemers(werknemer1);
 //-----------------------------------------------------------------------------------------
         WerknemerDetail adres1 = new WerknemerDetail();
         adres1.setAdress("Ramdasstraat#14");
@@ -145,7 +135,12 @@ public class CreateDataService {
         werkUren1.setWerknemerId(w1);
         werkUrenService.addWerkUren(werkUren1);
 
-
+        WerkUren werkUren2 = new WerkUren();
+        werkUren2.setMaand("Februari");
+        werkUren2.setAantalUren(55);
+        werkUren2.setUurloon(150);
+        werkUren2.setWerknemerId(w1);
+        werkUrenService.addWerkUren(werkUren2);
 
     }
 

@@ -49,7 +49,7 @@ public class Functie {
         return Afdeling;
     }
 
-    public void setAfdeling(sr.unasat.entity.Afdeling afdeling) {
+    public void setAfdeling(Afdeling afdeling) {
         Afdeling = afdeling;
     }
 
@@ -57,7 +57,7 @@ public class Functie {
         return werknemers;
     }
 
-    public void setWerknemers(Set<Werknemer> werknemers) {
-        this.werknemers = werknemers;
+    public void setWerknemers(Werknemer werknemer) {
+        this.werknemers.add(werknemer);
     }
 }
