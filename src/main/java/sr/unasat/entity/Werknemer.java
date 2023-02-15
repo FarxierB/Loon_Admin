@@ -1,5 +1,6 @@
 package sr.unasat.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -20,6 +21,8 @@ public class Werknemer {
     @ManyToMany
     @JoinTable(name = "Werknemer_Rol", joinColumns = {@JoinColumn(name = "Werknemer_ID")}, inverseJoinColumns = {@JoinColumn(name = "Functie_ID")})
     private Set<Functie> functies = new HashSet<>();
+
+
 
 
     public int getId() {

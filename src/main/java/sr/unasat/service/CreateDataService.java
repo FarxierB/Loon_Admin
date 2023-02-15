@@ -2,9 +2,6 @@ package sr.unasat.service;
 
 import sr.unasat.entity.*;
 
-import java.util.List;
-import java.util.Set;
-
 public class CreateDataService {
 
     public static void CreateData(){
@@ -14,6 +11,7 @@ public class CreateDataService {
     WerknemerDetailService werknemerDetailService = new WerknemerDetailService();
     WerkUrenService werkUrenService = new WerkUrenService();
     WerknemerService werknemerService = new WerknemerService();
+    InlogService inlogService = new InlogService();
 
 
 
@@ -141,6 +139,12 @@ public class CreateDataService {
         werkUren2.setUurloon(150);
         werkUren2.setWerknemerId(w1);
         werkUrenService.addWerkUren(werkUren2);
+
+        InlogWerknemer inlog1 = new InlogWerknemer();
+        inlog1.setUsername("dbechan");
+        inlog1.setPassword("Bechan1234");
+        inlog1.setWerknemerId(w1);
+        inlogService.addInlogGegevens(inlog1);
 
     }
 
