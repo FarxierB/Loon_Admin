@@ -12,7 +12,7 @@ public class ApplicationConfig  extends Application {
     @Override
     public Map<String, Object> getProperties(){
         Map<String, Object> properties = new HashMap<>();
-        properties.put("jersey.config.server.provider.packages","sr.unasat.controllers");
+        properties.put("jersey.config.server.provider.packages","sr.unasat.controller");
         JPAConfiguration.getEm();
         return properties;
     }
