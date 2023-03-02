@@ -2,6 +2,9 @@ package sr.unasat.service;
 
 import sr.unasat.entity.*;
 
+import java.sql.Date;
+import java.time.LocalDate;
+
 public class CreateDataService {
 
     public static void CreateData(){
@@ -99,28 +102,28 @@ public class CreateDataService {
         WerknemerDetail adres1 = new WerknemerDetail();
         adres1.setAdress("Ramdasstraat#14");
         adres1.setTelefoon(8874555);
-        adres1.setGeboorteDatum("24-05-1999");
+        adres1.setGeboorteDatum(LocalDate.of(1999,5,24));
         adres1.setWerknemerId(w1);
         werknemerDetailService.addWerknemerDetail(adres1);
 
         WerknemerDetail adres2 = new WerknemerDetail();
         adres2.setAdress("Oranjestraat#5");
         adres2.setTelefoon(8958862);
-        adres2.setGeboorteDatum("05-12-1984");
+        adres2.setGeboorteDatum(LocalDate.of(1984,12,5));
         adres2.setWerknemerId(w2);
         werknemerDetailService.addWerknemerDetail(adres2);
 
         WerknemerDetail adres3 = new WerknemerDetail();
         adres3.setAdress("Paarsstraat#74");
         adres3.setTelefoon(8612565);
-        adres3.setGeboorteDatum("15-08-1975");
+        adres3.setGeboorteDatum(LocalDate.of(1975,8,15));
         adres3.setWerknemerId(w3);
         werknemerDetailService.addWerknemerDetail(adres3);
 
         WerknemerDetail adres4 = new WerknemerDetail();
         adres4.setAdress("Groenstraat#34");
         adres4.setTelefoon(8651652);
-        adres4.setGeboorteDatum("12-09-1981");
+        adres4.setGeboorteDatum(LocalDate.of(1981,9,12));
         adres4.setWerknemerId(w4);
         werknemerDetailService.addWerknemerDetail(adres4);
 

@@ -1,25 +1,19 @@
-package sr.unasat.entity;
+package sr.unasat.dto;
 
-import jakarta.persistence.*;
+import sr.unasat.entity.Werknemer;
 
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "WerknemerDetail")
-public class WerknemerDetail {
-
-    @Id
-    @GeneratedValue
-    private int id;
+public class WerknemerDetailDTO {
+    private  int id;
 
     private String adress;
+
     private int telefoon;
+
     private LocalDate geboorteDatum;
 
-    @OneToOne
-    @JoinColumn(name = "Werknemer_ID")
     private Werknemer werknemerId;
-
 
     public int getId() {
         return id;
