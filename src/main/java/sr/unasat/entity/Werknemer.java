@@ -115,5 +115,16 @@ public class Werknemer {
     }
 
 
+    @Override
+    public String toString(){
+        return "Werknemer{" +
+                "Id=" + Id +
+                ", Achternaam='" + Achternaam + '\'' +
+                ", voornaam='" + Voornaam + '\'' +
+                ", Email='" + Email + '\'' +
+                ", Functie='" + functies + '\'' +
+                '}';
+
+    }
 
 }

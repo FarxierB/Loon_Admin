@@ -8,17 +8,17 @@ import java.util.List;
 
 public class WerknemerService {
 
-    private final WerknemerRepository repository;
+    private final WerknemerRepository werknemerRepository;
 
-    public WerknemerService() {this.repository = new WerknemerRepository(JPAConfiguration.getEm());}
+    public WerknemerService() {this.werknemerRepository = new WerknemerRepository(JPAConfiguration.getEm());}
 
-    public List<Werknemer> getWerknemers() {return repository.getWerknemers();}
+    public List<Werknemer> getWerknemers() {return werknemerRepository.getWerknemers();}
 
-    public Werknemer getWerknemer(int Id){return repository.getWerknemer(Id);}
+    public Werknemer getWerknemer(int Id){return werknemerRepository.getWerknemer(Id);}
 
-    public Werknemer addWerknemer(Werknemer werknemer) {return repository.addWerknemer(werknemer);}
+    public Werknemer addWerknemer(Werknemer werknemer) {return werknemerRepository.addWerknemer(werknemer);}
 
-    public Werknemer updateWerknemer(Werknemer werknemer) { return repository.updateWerknemer(werknemer);}
+    public Werknemer updateWerknemer(Werknemer werknemer) { return werknemerRepository.updateWerknemer(werknemer);}
 
-    public Werknemer deleteWerknemer(Werknemer werknemer) { return repository.deleteWerknemer(werknemer);}
+    public Werknemer deleteWerknemer(Werknemer werknemer) { return werknemerRepository.deleteWerknemer(werknemer);}
 }

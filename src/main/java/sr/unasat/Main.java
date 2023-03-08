@@ -11,9 +11,7 @@ public class Main {
 
             CreateDataService.CreateData();
 
-
-
-
+           // CreateDataService.getInfo();
 
 
 

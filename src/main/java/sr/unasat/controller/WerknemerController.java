@@ -8,21 +8,24 @@ import jakarta.ws.rs.core.MediaType;
 import sr.unasat.configuration.JPAConfiguration;
 import sr.unasat.entity.Werknemer;
 import sr.unasat.repository.WerknemerRepository;
+import sr.unasat.service.WerknemerService;
 
 import java.util.List;
 
-@Path("werknemer/invoer")
+@Path("werknemer")
 public class WerknemerController {
- private WerknemerRepository werknemerRepository = new WerknemerRepository(JPAConfiguration.getEm());
+ private  WerknemerService werknemerService = new WerknemerService();
 
-
- @Path("werknemerlist")
+ @Path("/list")
  @GET
  @Produces(MediaType.APPLICATION_JSON)
- public List<Werknemer> getWerknemers() { return werknemerRepository.getWerknemers();}
+ public List<Werknemer> getAllWerknemers() {
+  System.out.println(werknemerService.getWerknemers());
+  return werknemerService.getWerknemers();
+ }
 
 
-// @Path("addwerknemer")
+// @Path("")
 // @POST
 // public String AddWerknemer
 

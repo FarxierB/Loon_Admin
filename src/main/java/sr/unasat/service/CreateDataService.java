@@ -6,15 +6,15 @@ import java.sql.Date;
 import java.time.LocalDate;
 
 public class CreateDataService {
-
+    static AfdelingService afdelingService = new AfdelingService();
+    static FunctieService functieService = new FunctieService();
+    static WerknemerDetailService werknemerDetailService = new WerknemerDetailService();
+    static  WerkUrenService werkUrenService = new WerkUrenService();
+    static WerknemerService werknemerService = new WerknemerService();
+    static InlogService inlogService = new InlogService();
     public static void CreateData(){
 
-    AfdelingService afdelingService = new AfdelingService();
-    FunctieService functieService = new FunctieService();
-    WerknemerDetailService werknemerDetailService = new WerknemerDetailService();
-    WerkUrenService werkUrenService = new WerkUrenService();
-    WerknemerService werknemerService = new WerknemerService();
-    InlogService inlogService = new InlogService();
+
 
 
 
@@ -150,5 +150,9 @@ public class CreateDataService {
         inlogService.addInlogGegevens(inlog1);
 
     }
+    public static void getInfo(){
+        System.out.println(werknemerService.getWerknemers());
+    }
+
 
 }

@@ -6,7 +6,7 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
 public class JPAConfiguration {
-    private static final String PERSISTENCE_UNIT_NAME = "unasat_persistence";
+    private static final String PERSISTENCE_UNIT_NAME = "sr.unasat_persistence";
     private static EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
     private static EntityManager em = emf.createEntityManager();
 
