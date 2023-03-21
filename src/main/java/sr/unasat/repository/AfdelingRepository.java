@@ -30,7 +30,7 @@ public class AfdelingRepository {
     public Afdeling deleteAfdeling(Afdeling afdeling){
         try{
             entityManager.getTransaction().begin();
-            entityManager.find(Werknemer.class, afdeling.getId());
+            entityManager.find(Afdeling.class, afdeling.getId());
             if(afdeling != null)  entityManager.remove(afdeling);
             entityManager.getTransaction().commit();
         }catch (Exception e){
@@ -44,7 +44,7 @@ public class AfdelingRepository {
     public Afdeling updateAfdeling(Afdeling afdeling){
         try{
             entityManager.getTransaction().begin();
-            entityManager.find(Werknemer.class, afdeling.getId());
+            entityManager.find(Afdeling.class, afdeling.getId());
             entityManager.merge(afdeling);
             entityManager.getTransaction().commit();
         }catch (Exception e){

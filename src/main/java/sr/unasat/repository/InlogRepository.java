@@ -1,7 +1,11 @@
 package sr.unasat.repository;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.TypedQuery;
 import sr.unasat.entity.InlogWerknemer;
+import sr.unasat.entity.Werknemer;
+
+import java.util.List;
 
 public class InlogRepository {
 
@@ -55,5 +59,14 @@ public class InlogRepository {
             entityManager.getTransaction().rollback();
         }
         return inlogWerknemer;
+    }
+
+    public List<InlogWerknemer> getInlog() {
+        entityManager.getTransaction().begin();
+        String query = "select w from InlogWerknemer w";
+        TypedQuery<InlogWerknemer> typedQuery = entityManager.createQuery(query, InlogWerknemer.class);
+        List<InlogWerknemer> inlogList = typedQuery.getResultList();
+        entityManager.getTransaction().commit();
+        return inlogList;
     }
 }

@@ -15,7 +15,7 @@ public class WerknemerRepository {
         this.entityManager = entityManager;
     }
 
-    public List<Werknemer> getWerknemers() {
+    public List<Werknemer> getWerknemerList() {
         entityManager.getTransaction().begin();
         String query = "select w from Werknemer w";
         TypedQuery<Werknemer> typedQuery = entityManager.createQuery(query, Werknemer.class);

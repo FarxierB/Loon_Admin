@@ -1,4 +1,4 @@
-import sr.unasat.configuration.JPAConfiguration;
+import sr.unasat.config.JPAConfiguration;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 
@@ -13,7 +13,7 @@ public class ApplicationConfig  extends Application {
     public Map<String, Object> getProperties(){
         Map<String, Object> properties = new HashMap<>();
         properties.put("jersey.config.server.provider.packages","sr.unasat.controller");
-        JPAConfiguration.getEm();
+        JPAConfiguration.getEntityManager();
         return properties;
     }
 }

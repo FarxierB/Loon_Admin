@@ -13,9 +13,16 @@ import java.util.Set;
 public class Werknemer {
     @Id
     @GeneratedValue
+    @Column
     private int Id;
+
+    @Column
     private String Voornaam;
+
+    @Column
     private String Achternaam;
+
+    @Column
     private String Email;
 
     @ManyToMany

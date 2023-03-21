@@ -25,11 +25,39 @@
 </header>
 
 
-<div class="container-fluid">
+<div class="container">
+    <div class="text-center mt-5">
+        <h1>Werknemers</h1>
+    </div>
 
-    <!-- Page content-->
-
-
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Maand</th>
+                <th scope="col">Aantal uren</th>
+                <th scope="col">Uurloon</th>
+                <th scope="col">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#WerknemerToevoegen">Add</button>
+                </th>
+            </tr>
+            </thead>
+            <tbody id="tableBody">
+            <tr>
+                <td>1</td>
+                <td>Dhiradj</td>
+                <td>Bechan</td>
+                <td>dbechan@hotmail.com</td>
+                <td>Assistant Finance</td>
+                <td>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#wijzigDienst">Details/Wijzigen</button>
+                    <button type="button" class="btn btn-danger">Verwijderen</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 

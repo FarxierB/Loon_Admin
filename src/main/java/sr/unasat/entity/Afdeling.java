@@ -12,8 +12,10 @@ import java.util.Set;
 public class Afdeling {
     @Id
     @GeneratedValue
+    @Column
     private int Id;
 
+    @Column
     private String AfdelingNaam;
 
     @OneToMany (mappedBy = "Afdeling")

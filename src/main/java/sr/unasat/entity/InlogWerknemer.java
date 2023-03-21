@@ -6,10 +6,13 @@ import jakarta.persistence.*;
 public class InlogWerknemer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
     private int id;
 
+    @Column
     private String username;
 
+    @Column
     private String password;
 
     @OneToOne
@@ -43,7 +46,6 @@ public class InlogWerknemer {
     public void setPassword(String password) {
         this.password = password;
     }
-
     public Werknemer getWerknemerId() {
         return werknemerId;
     }

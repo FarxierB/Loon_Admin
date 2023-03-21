@@ -1,6 +1,6 @@
 package sr.unasat.service;
 
-import sr.unasat.configuration.JPAConfiguration;
+import sr.unasat.config.JPAConfiguration;
 import sr.unasat.entity.WerkUren;
 import sr.unasat.repository.WerkUrenRepository;
 
@@ -11,7 +11,7 @@ public class WerkUrenService {
     private final WerkUrenRepository repository;
 
     public WerkUrenService() {
-        this.repository = new WerkUrenRepository(JPAConfiguration.getEm());
+        this.repository = new WerkUrenRepository(JPAConfiguration.getEntityManager());
     }
 
     public List<WerkUren> getWerkUrenLijst() {

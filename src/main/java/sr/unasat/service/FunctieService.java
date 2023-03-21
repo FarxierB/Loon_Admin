@@ -1,6 +1,6 @@
 package sr.unasat.service;
 
-import sr.unasat.configuration.JPAConfiguration;
+import sr.unasat.config.JPAConfiguration;
 import sr.unasat.entity.Functie;
 import sr.unasat.repository.FunctieRepository;
 
@@ -9,7 +9,7 @@ public class FunctieService {
     private final FunctieRepository repository;
 
     public FunctieService() {
-        this.repository = new FunctieRepository(JPAConfiguration.getEm());
+        this.repository = new FunctieRepository(JPAConfiguration.getEntityManager());
     }
 
     public Functie addFunctie(Functie functie) {

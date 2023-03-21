@@ -1,6 +1,6 @@
 package sr.unasat.service;
 
-import sr.unasat.configuration.JPAConfiguration;
+import sr.unasat.config.JPAConfiguration;
 import sr.unasat.entity.Afdeling;
 import sr.unasat.repository.AfdelingRepository;
 
@@ -9,9 +9,7 @@ public class AfdelingService {
 
     private final AfdelingRepository repository;
 
-    public AfdelingService() {
-        this.repository = new AfdelingRepository(JPAConfiguration.getEm());
-    }
+    public AfdelingService() { this.repository = new AfdelingRepository(JPAConfiguration.getEntityManager()); }
 
     public Afdeling addAfdeling(Afdeling afdeling) {
         return repository.addAfdeling(afdeling);

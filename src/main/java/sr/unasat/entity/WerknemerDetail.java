@@ -10,10 +10,16 @@ public class WerknemerDetail {
 
     @Id
     @GeneratedValue
+    @Column
     private int id;
 
+    @Column
     private String adress;
+
+    @Column
     private int telefoon;
+
+    @Column
     private LocalDate geboorteDatum;
 
     @OneToOne

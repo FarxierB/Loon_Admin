@@ -7,10 +7,16 @@ import jakarta.persistence.*;
 public class WerkUren {
     @Id
     @GeneratedValue
+    @Column
     private int Id;
 
+    @Column
     private String Maand;
+
+    @Column
     private double AantalUren;
+
+    @Column
     private double Uurloon;
 
     @ManyToOne

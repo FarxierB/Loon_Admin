@@ -12,8 +12,10 @@ import java.util.Set;
 public class Functie {
     @Id
     @GeneratedValue
+    @Column
     private int Id;
 
+    @Column
     private String functie;
 
     @ManyToOne

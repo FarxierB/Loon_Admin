@@ -146,7 +146,7 @@ public class CreateDataService {
         InlogWerknemer inlog1 = new InlogWerknemer();
         inlog1.setUsername("dbechan");
         inlog1.setPassword("Bechan1234");
-        inlog1.setWerknemerId(w1);
+        //inlog1.setWerknemerId(w1);
         inlogService.addInlogGegevens(inlog1);
 
     }
