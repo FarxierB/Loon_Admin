@@ -42,7 +42,7 @@ public class Afdeling {
         return functies;
     }
 
-    public void setFuncties(Set<Functie> functies) {
-        this.functies = functies;
+    public void setFuncties(Functie functie) {
+        this.functies.add(functie);
     }
 }

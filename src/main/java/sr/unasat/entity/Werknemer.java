@@ -26,7 +26,7 @@ public class Werknemer {
     private String Email;
 
     @ManyToMany
-    @JoinTable(name = "Werknemer_Rol", joinColumns = {@JoinColumn(name = "Werknemer_ID")}, inverseJoinColumns = {@JoinColumn(name = "Functie_ID")})
+    @JoinTable(name = "Werknemer_Functie", joinColumns = {@JoinColumn(name = "Werknemer_ID")}, inverseJoinColumns = {@JoinColumn(name = "Functie_ID")})
     private Set<Functie> functies = new HashSet<>();
 
     public static class WerknemerBuilder {

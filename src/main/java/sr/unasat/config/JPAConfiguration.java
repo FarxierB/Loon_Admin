@@ -6,8 +6,8 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
 public class JPAConfiguration {
-    private static final String PERSISTENCE_UNIT_NAME = "persistence";
-    private static EntityManagerFactory factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+    //private static final String PERSISTENCE_UNIT_NAME = "persistence";
+    private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistence");
     private static EntityManager entityManager = factory.createEntityManager();
 
     public static EntityManagerFactory getEntityManagerFactory() {
